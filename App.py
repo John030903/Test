@@ -12,8 +12,9 @@ def use_api(url):
     """
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70',}
     response = requests.get(url, headers=headers)
-    data = json.loads(response.content)
+    # print(response.content)
+    data = response.content
     return data
 
-data  = use_api("http://10.12.140.181:5000")
+data  = use_api("http://127.0.0.1:5000")
 st.write(data)
