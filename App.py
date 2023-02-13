@@ -16,5 +16,5 @@ def use_api(url):
     data = response.content
     return data
 
-data  = use_api("http://127.0.0.1:5500")
+data  = use_api("http://127.0.0.1:37647")
 st.write(data)
